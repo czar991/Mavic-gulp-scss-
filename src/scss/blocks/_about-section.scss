@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
   padding-left: 56px;
   &-text {
     max-width: 440px;
@@ -17,7 +16,11 @@
   }
   &-content {
     position: relative;
-    max-width: 524px;
+    width: 100%;
+    max-width: 560px;
+    @media (max-width: 580px) {
+      max-width: 100%;
+    }
     p {
       font-size: 24px;
       font-weight: 500;
@@ -30,21 +33,36 @@
     }
   }
   &-image {
-    margin-top: 97px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 13.4%;
+    position: relative;
     img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
   }
-  &-slider::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 279px;
-    border: 4px solid #fff;
-    bottom: 15px;
-    right: -15px;
-    z-index: -1;
+  &-slider {
+    max-width: 560px;
+    margin-top: 97px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 4px solid #fff;
+      bottom: 15px;
+      right: -15px;
+      z-index: -1;
+      @media (max-width: 1300px) {
+        right: -10px;
+      }
+    }
   }
 }
 .slider__btn {
@@ -81,12 +99,8 @@
 }
 @media (max-width: 1100px) {
   .about__desc {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
     &-content {
-      justify-self: right;
-
+      margin-left: auto;
       p {
         left: -40%;
         top: 74%;
@@ -120,16 +134,18 @@
 }
 @media (max-width: 580px) {
   .about__desc {
-    &-content {
-      max-width: 100%;
-    }
-    &-slider::after {
-      height: 100%;
-    }
-    &-image {
-      img {
-        max-width: 100%;
-      }
-    }
+    display: block;
+    padding-left: 0;
+    // &-content {
+    //   max-width: 100%;
+    // }
+    // &-slider::after {
+    //   height: 100%;
+    // }
+    // &-image {
+    //   img {
+    //     max-width: 100%;
+    //   }
+    // }
   }
 }
