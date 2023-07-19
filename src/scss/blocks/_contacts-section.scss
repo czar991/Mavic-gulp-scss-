@@ -1,0 +1,80 @@
+.contacts__desc {
+  padding-left: 56px;
+  display: flex;
+}
+
+.cities {
+  max-width: 240px;
+  width: 100%;
+  margin-right: 60px;
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item + &__item {
+    margin-top: 30px;
+  }
+  &__name {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 13px;
+  }
+  &__tel {
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+  &__email {
+    font-weight: 300;
+    line-height: 1.3;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.cta {
+  display: flex;
+  flex-direction: column;
+  margin-right: 106px;
+  h3 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 13px;
+  }
+  p {
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  &__inputs {
+    margin-bottom: 10px;
+  }
+  &__forms {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    &.textarea {
+      min-height: 144px;
+      margin-bottom: 20px;
+    }
+  }
+  &__forms + &__forms {
+    margin-left: 10px;
+  }
+  &__btn {
+    padding: 9px 15px;
+    align-self: flex-start;
+  }
+}
+.socials__list-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-self: center;
+}
+
+.social__link-contacts {
+  transition: all 0.5s ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

@@ -1,0 +1,135 @@
+.about__desc {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding-left: 56px;
+  &-text {
+    max-width: 440px;
+    p + p {
+      margin-top: 25px;
+    }
+    p {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+  &-content {
+    position: relative;
+    max-width: 524px;
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      position: absolute;
+      left: -211px;
+      bottom: 30px;
+      max-width: 281px;
+      height: 56px;
+      text-align: right;
+    }
+  }
+  &-image {
+    margin-top: 97px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  &-slider::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 279px;
+    border: 4px solid #fff;
+    bottom: 15px;
+    right: -15px;
+    z-index: -1;
+  }
+}
+.slider__btn {
+  padding: 16px 26px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 3;
+  transition: all 0.5s ease;
+  svg {
+    stroke: #000;
+  }
+  &-left {
+    right: 60px;
+  }
+  &.slick-disabled {
+    background-color: #000;
+    svg {
+      stroke: #fff;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .about__desc {
+    &-content {
+      p {
+        left: 0;
+        top: 25px;
+      }
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .about__desc {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    &-content {
+      justify-self: right;
+
+      p {
+        left: -40%;
+        top: 74%;
+      }
+    }
+    &-image {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about__desc {
+    gap: 130px;
+    padding-left: 26px;
+    &-text {
+      width: 100%;
+      max-width: unset;
+      p {
+        font-size: 15px;
+      }
+    }
+    &-content {
+      p {
+        font-size: 20px;
+        left: 0;
+        top: -25%;
+      }
+    }
+  }
+}
+@media (max-width: 580px) {
+  .about__desc {
+    &-content {
+      max-width: 100%;
+    }
+    &-slider::after {
+      height: 100%;
+    }
+    &-image {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
