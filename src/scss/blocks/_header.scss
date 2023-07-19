@@ -1,15 +1,17 @@
 .header {
   background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 30px 0;
+  transition: all 0.5s ease;
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    top: 40px;
-    left: 0;
-    right: 0;
-    z-index: 99;
   }
   &__logo {
     display: flex;
@@ -40,6 +42,9 @@
   &__btn {
     padding: 7px 28px 6px;
   }
+  @media (max-width: 600px) {
+    padding: 15px 0;
+  }
 }
 .nav__list {
   display: flex;
@@ -52,14 +57,12 @@
     display: none;
   }
 }
-
+.sticky {
+  background: rgba(28, 28, 28, 0.9);
+}
 // media  ///////
 @media (max-width: 1100px) {
   .header {
-    &__container {
-      top: 0;
-      padding-top: 20px;
-    }
     &__nav {
       position: absolute;
       width: 100%;

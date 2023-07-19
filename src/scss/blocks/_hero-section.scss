@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../img/heroBackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,6 +7,7 @@
   display: flex;
   align-items: flex-end;
   padding: 50px 0 50px;
+  position: relative;
   &::before {
     content: '';
     position: absolute;
@@ -27,12 +28,22 @@
     font-weight: 600;
     text-align: center;
     margin-bottom: 25px;
+    @media (max-width: 1440px) {
+      font-size: 80px;
+      margin-bottom: 15px;
+    }
   }
   &__image {
     text-align: center;
 
     img {
       margin-bottom: 25px;
+      @media (max-width: 1440px) {
+        width: 85%;
+      }
+      @media (max-width: 1024px) {
+        width: 75%;
+      }
     }
     p {
       max-width: 324px;
@@ -63,14 +74,11 @@
 // media  //////
 @media (max-width: 1024px) {
   .hero {
+    align-items: center;
     &__title {
-      font-size: 76px;
-      margin-bottom: 25px;
+      font-size: 66px;
     }
     &__image {
-      img {
-        width: 80%;
-      }
       p {
         max-width: 324px;
         width: 100%;
@@ -80,9 +88,6 @@
         line-height: 1.5;
       }
     }
-  }
-  .socials__list {
-    margin-top: 25%;
   }
 }
 @media (max-width: 600px) {
@@ -96,14 +101,7 @@
       }
     }
     .socials__list {
-      margin-top: 30%;
-    }
-  }
-}
-@media (max-width: 475px) {
-  .hero {
-    .socials__list {
-      margin-top: 50%;
+      margin-top: 15%;
     }
   }
 }
