@@ -18,9 +18,6 @@
     position: relative;
     width: 100%;
     max-width: 560px;
-    @media (max-width: 580px) {
-      max-width: 100%;
-    }
     p {
       font-size: 24px;
       font-weight: 500;
@@ -106,9 +103,6 @@
         top: 74%;
       }
     }
-    &-image {
-      margin-top: 0;
-    }
   }
 }
 
@@ -136,16 +130,5 @@
   .about__desc {
     display: block;
     padding-left: 0;
-    // &-content {
-    //   max-width: 100%;
-    // }
-    // &-slider::after {
-    //   height: 100%;
-    // }
-    // &-image {
-    //   img {
-    //     max-width: 100%;
-    //   }
-    // }
   }
 }

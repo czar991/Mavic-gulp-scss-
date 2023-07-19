@@ -11,7 +11,7 @@ body {
 
 [class*='__container'] {
   max-width: 1268px;
-  padding: 15px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -25,14 +25,18 @@ body {
     color: #1c1c1c;
   }
 }
+
 .sections {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../img/sBackground.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   padding: 150px 0 50px;
+  // &:not(.about) {
+  //   display: none;
+  // }
 
   &::after {
     content: '';
@@ -63,11 +67,7 @@ body {
   font-weight: 400;
   margin-bottom: 55px;
   padding-left: 26px;
-  @media (max-width: 1440px) {
-    padding-top: 75px;
-  }
   @media (max-width: 1100px) {
-    padding-top: 0;
     margin-bottom: 20px;
   }
   @media (max-width: 768px) {
