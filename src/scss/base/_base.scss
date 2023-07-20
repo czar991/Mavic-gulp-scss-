@@ -72,6 +72,10 @@ body {
     font-size: 35px;
     padding-left: 13px;
   }
+  @media (max-width: 575px) {
+    padding-left: 0;
+    font-size: 30px;
+  }
 }
 .down__arrow {
   position: absolute;
